@@ -55,3 +55,17 @@ ultimoDigito n = mod n 10
 
 sacarUltimo :: Integer -> Integer
 ultimoDigito n = div n 10
+
+
+cantDigitos :: Integer -> Integer
+cantDigitos n | n < 10 = 1
+              | otherwise = 1 + cantDigitos(sacarUltimo n)
+              where sacarUltimo n = div n 10
+
+iesimoDigito :: Integer -> Integer -> Integer
+iesimoDigito n i | i == cantDigitos n = ultimoDigito n
+                 | otherwise = iesimoDigito (sacarUltimo n) i
+                 where sacarUltimo n = div n 10
+                        ultimoDigito n = mod n 10
+
+                        
