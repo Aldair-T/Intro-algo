@@ -12,10 +12,10 @@ relacionesValidas [] = True
 relacionesValidas x | hayRepetidos x == True = False
                     | otherwise = relacionesValidas (tail x)
 
-<--
+{-
 import Test.HUnit
 import Fibo
 
 run = runTestTT tests
 tests = test ("caso base 0"~: (relacionesValidas [("al","va"),("va","al"),("re","to")])~?=False)
--->
+-}
