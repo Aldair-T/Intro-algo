@@ -151,4 +151,30 @@ maximo [x] = x
 maximo (x:y:s) | x >= y = maximo(x:s)
                | x < y = maximo(y:s)
 
-                        
+
+
+long:: [t] -> Int
+long [] = 0
+long (x:xs) =1 + long(xs)
+ -- Ej 2 
+
+ultimo:: [Int]->Int
+ultimo (x:xs)| long (x:xs) == 1 = x 
+             | long (x:xs)>1 = ultimo (xs)
+
+-- Ej 3 
+principio:: [Int]-> [Int]
+principio (x:xs)| long (x:xs) == 1 = (x:0:xs)
+                | otherwise = (x:xs++0:xs)
+
+--Ej 4 
+reverso:: [Int]->[Int]
+reverso (x:xs) | (xs) == [] = [x]
+               | otherwise = reverso (xs) ++ [x]
+
+
+
+-- EJ 2 1
+pertenece:: (Eq t)=>t-> [t]-> Bool 
+pertenece r (x:xs)| head (x:xs) == r = True
+                  | otherwise = pertenece r (xs)
