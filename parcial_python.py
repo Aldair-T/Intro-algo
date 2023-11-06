@@ -54,12 +54,13 @@ Lista:
 .index(x) -> posicion de la primera aparicion de x
 .count(x) -> cantidad de apariciones de x
 .insert(p,x) -> insertar x delante de la posicion p
+cadena.split(separador) -> cadena a lista
+"".join(lista) -> lista a cadena
 
 Pila:
 .pop() -> elimina el ultimo elemento de la lista
 .pop(0) -> eliminar el primer elemnto de la lista
 a[-1] -> devuelve el ultimo elemento insertado
-
 Dict:
 .get(x,"msj") -> devuelve el valor de clave x, si no el msj
 .keys() -> lista con las claves del dict
